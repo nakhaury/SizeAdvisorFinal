@@ -1,5 +1,9 @@
 Week6::Application.routes.draw do
 
+  get "/login" => 'sessions#new'
+  get "/logout" => 'sessions#destroy'
+  get "/authenticate" => 'sessions#create'
+
   root 'products#index'
 
   get "/users/new" => 'users#new'
