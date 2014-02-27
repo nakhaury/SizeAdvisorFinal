@@ -45,6 +45,7 @@
   </div>
 
   <div class="col-md-4 sidebar">
+    <% if session[:user_id].present? %>
     <p><strong>Let Us Know What You Think About This Item.</strong></p>
 
     <form action="/reviews/create">
@@ -75,6 +76,9 @@
       </div>
       <input type="submit" class="btn btn-md btn-success" value="Submit My Review">
     </form>
+    <% else %>
+      <h2><a href="/login" class="btn btn-primary btn-lg">Sign In To Write a Review.</a></h2>
+    <% end %>
   </div>
 </div>
 
