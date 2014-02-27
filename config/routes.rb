@@ -1,11 +1,12 @@
 Week6::Application.routes.draw do
 
-  get "/" => 'products#index'
-
-  # Product-related URLs
+  root 'products#index'
 
   get "/users/new" => 'users#new'
   get "/users/create" => 'users#create'
+  get "/users/:user_id/show" => 'users#show'
+
+  # Product-related URLs
 
   # CREATE
   get "/products/new" => "products#new"

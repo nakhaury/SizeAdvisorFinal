@@ -1,7 +1,13 @@
 class ProductsController < ApplicationController
 
   def index
-    @product_list = Item.all.order('name asc')
+    if params[:cat].present?
+      filter_category = Category.find_by(:name => params[:cat])
+      @product_list = Item.all.where(:category_id => filter_category.id)
+      @product_list = @product_list.order('name asc')
+    else
+      @product_list = Item.all.order('name asc')
+    end
   end
 
   def show
