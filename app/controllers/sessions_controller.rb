@@ -11,7 +11,7 @@ class SessionsController < ApplicationController
     user = User.find_by(:first_name => params[:fname])
     if user.present?
       if user.password == params[:pwd]
-        session[:name] = user.first_name
+        session[:user_id] = user.id
         redirect_to root_url, notice: "Wazzzup!"
       else
         redirect_to root_url, notice: "Wrong Password."
