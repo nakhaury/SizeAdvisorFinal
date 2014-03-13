@@ -1,4 +1,4 @@
-class ProductsController < ApplicationController
+class SizeadviceController < ApplicationController
 
   def index
     if params[:cat].present?
@@ -22,6 +22,9 @@ class ProductsController < ApplicationController
   end
 
   def new
+  end
+
+  def about
   end
 
   def create
