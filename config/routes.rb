@@ -11,6 +11,7 @@ Week6::Application.routes.draw do
   get "/users/:user_id/show" => 'users#show'
 
   get "sizeadvice/about" => 'sizeadvice#about'
+  get "weather/conditions" => "weather#conditions"
 
   # Size Advice Code
 

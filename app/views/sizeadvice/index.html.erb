@@ -24,16 +24,26 @@
 
 
 
-
-
-
       <!-- Jumbotron -->
       <div class="jumbotron">
         <h1>SizeAdvice</h1>
-        <p class="lead">Next time, get the right size the first time</p>
-        <p><a class="btn btn-lg btn-success" href="#" role="button">Size in</a></p>
+        <h2>Next time, get the right size the first time</h2>
+        <p>
+
+        </p>
+
+        <form action="/search">
+        <div class="form-group">
+          <label>To see what type of weather you are sizing for, enter a city:</label>
+          <input name="city" type="text" class="form-control input-md" placeholder="Example: Chicago, IL"> <!-- label the input -->
+        </div>
+         <p><a class="btn btn-md btn-success" href="weather/conditions" role="button">Get weather</a></p>
+      </form>
+
 
       </div>
+
+
 
       <!-- Example row of columns -->
       <div class="row">
