@@ -1,17 +1,4 @@
-Do the usual dance: clone, bundle install, rake db:migrate, rake db:seed
+This app helps you find the right clothing size in another brand based on an existing brand.
 
-
-Use Ruby to help you answer these questions:
----------------------------------------------
-
-1. How many different items do we sell?
-
-2. How many categories do we have?
-
-3. What’s the most expensive item we sell?
-
-4. What’s the cheapest item?
-
-5. How many different toys do we sell?
-
+You would sign in. Input your size and get recommendation on another brand. Over time, the sizing recommendations are crowdsourced but initially just seeded.
 
