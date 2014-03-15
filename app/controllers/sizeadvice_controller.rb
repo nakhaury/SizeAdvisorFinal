@@ -1,25 +1,17 @@
 class SizeadviceController < ApplicationController
 
-  def index
-    if params[:cat].present?
-      filter_category = Category.find_by(:name => params[:cat])
-      @product_list = Item.all.where(:category_id => filter_category.id)
-      @product_list = @product_list.order('name asc')
-    else
-      @product_list = Item.all.order('name asc')
-    end
+  def home
   end
 
-  def show
-    @product = Item.find_by(:id => params[:product_id])
-    @reviews = Review.where(:item_id => @product.id).order('created_at desc')
+  require 'open-uri'
+
+  def conditions
+    @city123 = params[:city123] #must match input name on the page
+    url = URI.escape("http://api.openweathermap.org/data/2.5/weather?q=#{@city123}&units=imperial")
+    @json_data = open(url).read # @sign makes it usable from other controllers (makes it global)
+    @data = JSON.parse (@json_data)
   end
 
-  def destroy
-    product = Item.find_by(:id => params[:product_id])
-    product.destroy
-    redirect_to "/products", notice: "That product is toast!"
-  end
 
   def new
   end

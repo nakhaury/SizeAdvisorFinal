@@ -4,14 +4,14 @@ Week6::Application.routes.draw do
   get "/logout" => 'sessions#destroy'
   get "/authenticate" => 'sessions#create'
 
-  root 'sizeadvice#index'
+  root 'sizeadvice#home'
 
   get "/users/new" => 'users#new'
   get "/users/create" => 'users#create'
   get "/users/:user_id/show" => 'users#show'
 
   get "sizeadvice/about" => 'sizeadvice#about'
-  get "weather/conditions" => "weather#conditions"
+  get "sizeadvice/conditions" => "sizeadvice#conditions"
 
   # Size Advice Code
 
@@ -20,7 +20,7 @@ Week6::Application.routes.draw do
   get "/sizeadvice/create" => "sizeadvice#create"
 
   # READ
-  get "/sizeadvice" => 'sizeadvice#index'
+  get "/home" => 'sizeadvice#home'
   get "/sizeadvice/:product_id/show" => "sizeadvice#show"
 
   # UPDATE
