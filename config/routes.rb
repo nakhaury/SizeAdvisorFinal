@@ -24,7 +24,7 @@ Week6::Application.routes.draw do
   get "/sizeadvice/:product_id/show" => "sizeadvice#show"
 
   # UPDATE
-  get "/sizeadvice/:product_id/edit" => "sizeadvice#edit"
+  get "/input" => "sizeadvice#input"
   get "/sizeadvice/:product_id/update" => "sizeadvice#update"
 
   # DELETE

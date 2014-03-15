@@ -3,6 +3,9 @@ class SizeadviceController < ApplicationController
   def home
   end
 
+  def input
+  end
+
   require 'open-uri'
 
   def conditions
