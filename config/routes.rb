@@ -21,6 +21,7 @@ Week6::Application.routes.draw do
 
   # READ
   get "/home" => 'sizeadvice#home'
+  get "/recommendation" => 'sizeadvice#recommendation'
   get "/sizeadvice/:product_id/show" => "sizeadvice#show"
 
   # UPDATE
