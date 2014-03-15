@@ -14,25 +14,29 @@
 ActiveRecord::Schema.define(version: 20140220213429) do
 
 
-
-  create_table "items", force: true do |t|
-    t.string   "image_url"
-    t.string   "name"
-    t.integer  "price"
-    t.text     "description"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "category_id"
+ create_table "abercrombie", force: true do |t|
+    t.integer  "user_id"
+    t.string   "size"
   end
 
-  create_table "reviews", force: true do |t|
-    t.integer  "item_id"
-    t.string   "title"
-    t.text     "body"
-    t.integer  "rating"
-    t.datetime "created_at"
-    t.datetime "updated_at"
+ create_table "bananarepublic", force: true do |t|
     t.integer  "user_id"
+    t.string   "size"
+  end
+
+ create_table "gap", force: true do |t|
+    t.integer  "user_id"
+    t.string   "size"
+  end
+
+ create_table "jcrew", force: true do |t|
+    t.integer  "user_id"
+    t.string   "size"
+  end
+
+  create_table "uniqlo", force: true do |t|
+    t.integer  "user_id"
+    t.string   "size"
   end
 
   create_table "users", force: true do |t|
